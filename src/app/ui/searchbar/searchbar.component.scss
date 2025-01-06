@@ -1,0 +1,72 @@
+/* Search Bar Container */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Button (Search Icon) Styling */
+.search-bar-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0077b6;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect for the search button */
+.search-bar-container button:hover {
+  transform: scale(1.1);
+}
+
+/* Input field styling */
+.search-bar-container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f0f4f8;
+  border-radius: 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input focus styling */
+.search-bar-container input:focus {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+}
+
+/* Input placeholder styling */
+.search-bar-container input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .search-bar-container {
+    max-width: 90%;
+    padding: 8px 16px;
+  }
+
+  .search-bar-container button {
+    font-size: 1.2rem;
+  }
+
+  .search-bar-container input {
+    font-size: 0.9rem;
+  }
+}

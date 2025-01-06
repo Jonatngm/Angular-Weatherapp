@@ -1,0 +1,93 @@
+@import "../../ui/colors/colors.scss";
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkblue;
+  padding: 1rem;
+
+}
+
+/* Logo */
+.logo a {
+  color: $white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-style: serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  font-size: 1rem;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: $white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: $secondary;
+  background-color: $white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: $white;
+  margin: 3px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: $primary;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .logo img {
+    height: 20px;
+    width: auto;
+    margin-left: 10px;
+  }
+}
+

@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="logo">
+    <a routerLink="/">The Weather with Robert</a>
+  </div>
+  <div class="menu-icon" (click)="toggleMenu()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  <ul class="nav-links" [class.active]="menuActive">
+    <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
+    <li><a routerLink="/weather" (click)="toggleMenu()">Weather</a></li>
+    <li><a routerLink="/about" (click)="toggleMenu()">About Us</a></li>
+  </ul>
+</nav>
